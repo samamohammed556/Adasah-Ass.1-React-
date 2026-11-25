@@ -22,7 +22,9 @@ const router = createBrowserRouter([
       { path: "*", element: <NotFound /> },
     ],
   },
-]);
+], {
+  basename: import.meta.env.BASE_URL,
+});
 
 function App() {
   return <RouterProvider router={router} />;

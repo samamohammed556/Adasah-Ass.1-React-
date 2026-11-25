@@ -8,7 +8,7 @@ import LatestPosts from "../components/home/LatestPosts.jsx";
 import NewsletterSection from "../components/home/NewsletterSection.jsx";
 
 function Home() {
-  const { data, loading, error } = useFetch("/data/posts.json");
+  const { data, loading, error } = useFetch(`${import.meta.env.BASE_URL}data/posts.json`);
 
   if (loading) return <Loader />;
   if (error) return <ErrorMessage message={error.message} onRetry={() => window.location.reload()} />;

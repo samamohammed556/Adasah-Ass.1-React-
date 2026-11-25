@@ -5,7 +5,7 @@ import { LuChevronLeft } from "react-icons/lu";
 import { useFetch } from "../../hooks/useFetch.js";
 
 function Footer({ siteInfo: propSiteInfo, categories: propCategories }) {
-  const { data } = useFetch("/data/posts.json");
+  const { data } = useFetch(`${import.meta.env.BASE_URL}data/posts.json`);
   const siteInfo = propSiteInfo || data?.siteInfo || {};
   const categories = propCategories || data?.categories || [];
 
